@@ -9,7 +9,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"os"
+	"strconv"
 
 	"github.com/Azure/azure-sdk-for-go/sdk/azcore/to"
 	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
@@ -20,7 +22,7 @@ var (
 	subscriptionID    string
 	location          = "westeurope"
 	resourceGroupName = "vNextPoc-Anna"
-	deploymentName    = "F09017-deployment5"
+	deploymentName    string
 )
 
 var (
@@ -33,13 +35,16 @@ var (
 )
 
 func main() {
-	//set env
+	//set deployment name with random number
+	deploymentName = fmt.Sprintf("%s_%s", "my_deployment_", strconv.Itoa(rand.Intn(1000)))
+	//set environment variables
 	os.Setenv("AZURE_TENANT_ID", "db42a3c1-b08d-45bc-bc52-9301ef2277c5")
 	os.Setenv("AZURE_SUBSCRIPTION_ID", "7fe9165d-336e-4da7-b939-072eb89d9c3a")
 	os.Setenv("AZURE_CLIENT_ID", "cc7009d3-adfa-43a1-8d13-f3082884274a")
 	os.Setenv("AZURE_CLIENT_SECRET", "u6h8Q~hAanDDqek4ABw6t.tZKbMaR2xlKSN2Zda7")
 	os.Setenv("KEEP_RESOURCE", "1")
 
+	fmt.Println("deploymentName is:", deploymentName)
 	fmt.Println("AZURE_SUBSCRIPTION_ID:", os.Getenv("AZURE_SUBSCRIPTION_ID"))
 
 	subscriptionID = os.Getenv("AZURE_SUBSCRIPTION_ID")
