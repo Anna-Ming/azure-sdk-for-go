@@ -1,0 +1,119 @@
+{
+    "apiVersion": {
+      "value": "2023-08-01-preview"
+    },
+    "arcNodeResourceIds": {
+      "value": ["/subscriptions/7fe9165d-336e-4da7-b939-072eb89d9c3a/resourceGroups/vNextPoc-Anna/providers/Microsoft.HybridCompute/machines/F09S01-122"]      
+    },
+    "domainFqdn": {
+      "value": "teambhci.local"
+      },
+    "namingPrefix": {
+      "value": "aszF094"
+      },
+      "clusterName": {
+        "value": "F09014"
+      },
+      "keyVaultName": {
+        "value": "annakv23"
+      },
+      "softDeleteRetentionDays": {
+        "value": 30
+      },
+      "diagnosticStorageAccountName": {
+        "value": "annasa1"
+      },
+      "logsRetentionInDays": {
+        "value": 30
+      },
+      "storageAccountType": {
+        "value": "Standard_LRS"
+      },
+    "adouPath": {
+      "value": "OU=F09014,DC=teambhci,DC=local"
+      },
+    "subnetMask": {
+        "value": "255.255.255.0"
+      },
+    "defaultGateway": {
+      "value": "10.124.84.1"
+      },
+    "startingIPAddress": {
+      "value": "10.124.84.123"
+      },
+    "endingIPAddress": {
+      "value": "10.124.84.129"
+      },
+    "ClusterWitnessStorageAccountName": {
+        "value": "annasa1"
+    },
+    "dnsServers": {
+        "value": ["10.124.84.130"]
+      },
+    "physicalNodesSettings": {
+        "value": [
+          {
+            "name": "F09S01-122",
+            "ipv4Address": "10.124.84.122"
+          }
+        ]
+      },
+      "networkingPattern": {
+        "value": "hyperConverged"
+      },
+      "intentList": {
+        "value":[
+          {
+            "name": "Compute_Management",
+            "trafficType": [
+                "Compute",
+                "Management"
+            ],
+            "adapter": [
+                "Integrated NIC 1 Port 1-1"
+            ],
+            "overrideVirtualSwitchConfiguration": false,
+            "virtualSwitchConfigurationOverrides": {
+                "enableIov": "",
+                "loadBalancingAlgorithm": ""
+            },
+            "overrideQosPolicy": false,
+            "qosPolicyOverrides": {
+                "priorityValue8021Action_Cluster": "7",
+                "priorityValue8021Action_SMB": "3",
+                "bandwidthPercentage_SMB": "50"
+            },
+            "overrideAdapterProperty": false,
+            "adapterPropertyOverrides": {
+                "jumboPacket": "9014",
+                "networkDirect": "Enabled",
+                "networkDirectTechnology": "RoCEv2"
+            }
+          }
+        ]
+      },
+      "storageNetworkList": {
+        "value":[]
+      },
+      "secretsLocation": {
+        "value": "https://annakv23.vault.azure.net"
+      },
+      "networkingType": {
+        "value": "singleServerDeployment"
+      },
+      "customLocation": {
+        "value":"F09014CustomLocation1"
+      },
+      "deploymentMode": {
+        "value": "Validate"
+      },
+      "localAdminSecret": {
+        "value": "administrator:Password123!"
+      },
+      "domainAdminSecret": {
+        "value": "testF095:Password123!"
+      },
+      "arbDeploymentSpn": {
+        "value": "f9e3fb44-1b8e-49f3-b9b1-799f693d7580:Cps8Q~ry4FcgJ5tobKxMGDG3vCbvT15_GLsvHdqW"
+      }
+  }
