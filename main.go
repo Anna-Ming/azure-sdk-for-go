@@ -36,7 +36,7 @@ var (
 
 func main() {
 	//set deployment name with random number
-	deploymentName = fmt.Sprintf("%s_%s", "my_deployment_", strconv.Itoa(rand.Intn(1000)))
+	deploymentName = fmt.Sprintf("%s_%s", "my_deployment", strconv.Itoa(rand.Intn(1000)))
 	//set environment variables
 	os.Setenv("AZURE_TENANT_ID", "db42a3c1-b08d-45bc-bc52-9301ef2277c5")
 	os.Setenv("AZURE_SUBSCRIPTION_ID", "7fe9165d-336e-4da7-b939-072eb89d9c3a")
